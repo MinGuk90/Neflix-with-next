@@ -54,7 +54,7 @@ function Modal() {
     <MuiModal open={showModal} onClose={handleClose} className="fixed !top-7 left-0 right-0 z-50 mx-auto w-full max-w-5xl overflow-hidden overflow-y-scroll rounded-md scrollbar-hide">
       <>
         <button onClick={handleClose} className="modalButton absolute right-5 top-5 !z-40 h-9 w-9 border-none bg-[#181818] hover:bg-[#181818]">
-          <XIcon className="h-6 w-6"/>
+          <XIcon className="w-6 h-6"/>
         </button>
 
         <div className="relative pt-[56.25%]">
@@ -67,10 +67,10 @@ function Modal() {
             muted={muted}
           />
 
-          <div className="absolute bottom-10 flex w-full items-center justify-between px-10">
+          <div className="absolute flex items-center justify-between w-full px-10 bottom-10">
             <div className="flex space-x-2">
               <button className="flex items-center gap-x-2 rounded bg-white px-8 text-xl font-bold text-black transition hover:bg-[#e6e6e6]">
-                <FaPlay className="h-7 w-7 text-black"/>
+                <FaPlay className="text-black h-7 w-7"/>
                 Play
               </button>
 
@@ -84,7 +84,7 @@ function Modal() {
             </div>
 
             <button onClick={() => setMuted(!muted)}>
-              {muted ? <VolumeOffIcon className="h-6 w-6"/> : <VolumeUpIcon className="h-6 w-6"/>}
+              {muted ? <VolumeOffIcon className="w-6 h-6"/> : <VolumeUpIcon className="w-6 h-6"/>}
             </button>
           </div>
         </div>
@@ -101,7 +101,7 @@ function Modal() {
               <div className="flex h-4 items-center justify-center rounded border border-white/40 px-1.5 text-xs">HD</div>
             </div>
 
-            <div className="flex flex-col gap-x-10 gap-y-4 font-light md:flex-row">
+            <div className="flex flex-col font-light gap-x-10 gap-y-4 md:flex-row">
               <p className="w-5/6">{movie?.overview}</p>
               <div className="flex flex-col space-y-3 text-sm">
                 <div>
